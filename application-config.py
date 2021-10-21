@@ -30,7 +30,7 @@ class AppConfig:
         image_spec = self.parsed_config['services'][service_name]['image'].split(':')[0]
         self.parsed_config['services'][service_name]['image'] = ':'.join([image_spec, tag])
     def get_yaml(self):
-        return yaml.dump(self.parsed_config, indent=1)
+        return yaml.dump(self.parsed_config, indent=2)
 
 
 def print_usage(params = []):
